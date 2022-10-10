@@ -4,6 +4,11 @@ import 'package:flutter/material.dart';
 void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
+  void playSound(int soundNumber) {
+    final player = new AudioCache();
+    player.play("note$soundNumber.wav");
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,53 +20,7 @@ class XylophoneApp extends StatelessWidget {
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.red)),
                 onPressed: () {
-                  final player = new AudioCache();
-                  player.play("note1.wav");
-                },
-                child: Text(""),
-              ),
-              TextButton(
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.blue)),
-                onPressed: () {
-                  final player = new AudioCache();
-                  player.play("note2.wav");
-                },
-                child: Text(""),
-              ),
-              TextButton(
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.green)),
-                onPressed: () {
-                  final player = new AudioCache();
-                  player.play("note3.wav");
-                },
-                child: Text(""),
-              ),
-              TextButton(
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.yellow)),
-                onPressed: () {
-                  final player = new AudioCache();
-                  player.play("note4.wav");
-                },
-                child: Text(""),
-              ),
-              TextButton(
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.purple)),
-                onPressed: () {
-                  final player = new AudioCache();
-                  player.play("note5.wav");
-                },
-                child: Text(""),
-              ),
-              TextButton(
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.pink)),
-                onPressed: () {
-                  final player = new AudioCache();
-                  player.play("note6.wav");
+                  playSound(1);
                 },
                 child: Text(""),
               ),
@@ -69,8 +28,47 @@ class XylophoneApp extends StatelessWidget {
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.orange)),
                 onPressed: () {
-                  final player = new AudioCache();
-                  player.play("note7.wav");
+                  playSound(2);
+                },
+                child: Text(""),
+              ),
+              TextButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.yellow)),
+                onPressed: () {
+                  playSound(3);
+                },
+                child: Text(""),
+              ),
+              TextButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.green)),
+                onPressed: () {
+                  playSound(4);
+                },
+                child: Text(""),
+              ),
+              TextButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.teal)),
+                onPressed: () {
+                  playSound(5);
+                },
+                child: Text(""),
+              ),
+              TextButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.blue)),
+                onPressed: () {
+                  playSound(6);
+                },
+                child: Text(""),
+              ),
+              TextButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.purple)),
+                onPressed: () {
+                  playSound(7);
                 },
                 child: Text(""),
               ),
